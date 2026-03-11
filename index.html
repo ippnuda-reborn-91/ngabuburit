@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nadzom Offline - IPPNUDA</title>
+    <link rel="manifest" href="manifest.json">
+    <style>
+        :root { --hijau-nu: #006400; --emas: #ffd700; }
+        body { font-family: sans-serif; background: #f4f7f4; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .app-card { background: white; width: 90%; max-width: 400px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); text-align: center; overflow: hidden; border: 2px solid var(--hijau-nu); }
+        .header { background: var(--hijau-nu); color: white; padding: 20px; }
+        .content { padding: 30px; }
+        audio { width: 100%; margin-top: 20px; }
+        .status { font-size: 12px; margin-top: 10px; color: #666; }
+    </style>
+</head>
+<body>
+
+<div class="app-card">
+    <div class="header">
+        <h2 style="margin:0">Nadzom Luru Ilmu</h2>
+        <small>IPPNUDA REBORN</small>
+    </div>
+    <div class="content">
+        <img src="https://via.placeholder.com/100/006400/FFFFFF?text=NU" style="border-radius: 50%; margin-bottom: 15px;">
+        <audio controls id="audio">
+            <source src="https://raw.githubusercontent.com/ippnuda-reborn-91/takbiran/main/Nadzom%20luru%20ilmu.mp3" type="audio/mpeg">
+        </audio>
+        <div id="offline-msg" class="status">Mendownload data untuk mode offline...</div>
+    </div>
+</div>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js')
+        .then(() => {
+            document.getElementById('offline-msg').innerText = "✅ Aplikasi Siap Pakai Tanpa Internet";
+        });
+    }
+</script>
+</body>
+</html>
