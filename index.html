@@ -3,43 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nadzom Offline - IPPNUDA</title>
+    <title>Ngabuburit Bersama IPPNUDA</title>
     <link rel="manifest" href="manifest.json">
     <style>
-        :root { --hijau-nu: #006400; --emas: #ffd700; }
-        body { font-family: sans-serif; background: #f4f7f4; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        .app-card { background: white; width: 90%; max-width: 400px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); text-align: center; overflow: hidden; border: 2px solid var(--hijau-nu); }
-        .header { background: var(--hijau-nu); color: white; padding: 20px; }
-        .content { padding: 30px; }
-        audio { width: 100%; margin-top: 20px; }
-        .status { font-size: 12px; margin-top: 10px; color: #666; }
+        :root {
+            --hijau-tua: #004d00;
+            --hijau-nu: #007a33;
+            --emas: #d4af37;
+            --bg-halus: #f4f9f4;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-halus);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 15px;
+        }
+
+        .app-card {
+            background: white;
+            width: 100%;
+            max-width: 420px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+
+        /* Header Islami */
+        .header {
+            background: linear-gradient(135deg, var(--hijau-tua), var(--hijau-nu));
+            color: white;
+            padding: 25px 15px;
+            text-align: center;
+            border-bottom: 4px solid var(--emas);
+        }
+        .header h1 {
+            font-size: 1.3rem;
+            margin: 0;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        .header p {
+            font-size: 0.85rem;
+            margin: 5px 0 0;
+            opacity: 0.9;
+        }
+
+        /* Foto Profil */
+        .profile-container {
+            margin-top: -45px;
+            text-align: center;
+        }
+        .profile-img {
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            background: white;
+            padding: 4px;
+            border: 3px solid var(--emas);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        /* Konten */
+        .content {
+            padding: 15px 25px 25px;
+            text-align: center;
+        }
+        .judul-ceramah {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--hijau-tua);
+            margin: 15px 0;
+            line-height: 1.4;
+        }
+
+        /* Audio Player Elegan */
+        .audio-box {
+            background: #f0f7f0;
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border-left: 5px solid var(--hijau-nu);
+        }
+        audio {
+            width: 100%;
+            filter: sepia(20%) saturate(70%) hue-rotate(80deg); /* Menyesuaikan warna player ke hijau */
+        }
+
+        /* Deskripsi */
+        .description {
+            text-align: justify;
+            font-size: 0.92rem;
+            color: #444;
+            line-height: 1.7;
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px dashed var(--hijau-nu);
+        }
+        .description p {
+            margin: 0 0 10px;
+            text-indent: 25px;
+        }
+
+        /* Footer Status */
+        .footer {
+            background: #f9f9f9;
+            padding: 15px;
+            border-top: 1px solid #eee;
+            font-size: 0.75rem;
+        }
+        .ready-text {
+            color: var(--hijau-nu);
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-weight: bold;
+            color: white;
+        }
+        .online { background: #2e7d32; }
+        .offline { background: #d32f2f; }
     </style>
 </head>
 <body>
 
 <div class="app-card">
     <div class="header">
-        <h2 style="margin:0">Nadzom Luru Ilmu</h2>
-        <small>IPPNUDA REBORN</small>
+        <h1>Ceramah KH. Zainudin MZ</h1>
+        <p>Ngabuburit bersama Ippnuda</p>
     </div>
+
+    <div class="profile-container">
+        <img src="https://lh3.googleusercontent.com/u/0/d/15i3gie_yf6dHKqzq3FrrB-v79_XxuMqe" class="profile-img" alt="Ippnuda" onerror="this.src='https://ui-avatars.com/api/?name=IPPNUDA&background=004d00&color=fff'">
+    </div>
+
     <div class="content">
-        <img src="https://via.placeholder.com/100/006400/FFFFFF?text=NU" style="border-radius: 50%; margin-bottom: 15px;">
-       <audio id="player" controls style="width: 100%; margin-top: 20px;">
-    <source src="Nadzom%20luru%20ilmu.mp3" type="audio/mpeg">
-</audio>
-        <div id="offline-msg" class="status">Mendownload data untuk mode offline...</div>
+        <div class="judul-ceramah">Fenomena 10 Hari Terakhir Bulan Ramadhan</div>
+
+        <div class="audio-box">
+            <audio id="player" controls>
+                <source src="Fenomena 10 Hari Terakhir Bulan Ramadhan .mp3" type="audio/mpeg">
+                Browser tidak mendukung audio.
+            </audio>
+        </div>
+
+        <div class="description">
+            <p>Ada masa ketika menjelang maghrib di bulan Ramadhan terasa begitu khas. Televisi dinyalakan, keluarga berkumpul menunggu adzan, dan suara ceramah dari Zainuddin MZ mengalun menemani detik-detik berbuka. Nasihatnya sederhana, kadang diselingi humor, namun selalu meninggalkan kesan yang dalam di hati.</p>
+            <p>Kini ketika memasuki sepuluh hari terakhir Ramadhan, kenangan itu kembali hadir. Bukan hanya menunggu hidangan berbuka, tetapi juga menunggu kata-kata yang mengingatkan bahwa Ramadhan hampir pergi. Semoga malam-malam terakhir ini kembali menghidupkan kerinduan kita untuk lebih mendekat kepada Allah. 🌙🤲</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <span class="ready-text">✅ Aplikasi Siap Pakai Tanpa Internet</span>
+        <div id="statusIndicator" class="badge online">Memeriksa...</div>
     </div>
 </div>
 
 <script>
+    // Status Koneksi
+    const statusEl = document.getElementById('statusIndicator');
+    function checkNetwork() {
+        if (navigator.onLine) {
+            statusEl.innerText = "Sinyal: ONLINE";
+            statusEl.className = "badge online";
+        } else {
+            statusEl.innerText = "Sinyal: OFFLINE";
+            statusEl.className = "badge offline";
+        }
+    }
+    window.addEventListener('online', checkNetwork);
+    window.addEventListener('offline', checkNetwork);
+    checkNetwork();
+
+    // Registrasi Service Worker
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js')
-        .then(() => {
-            document.getElementById('offline-msg').innerText = "✅ Aplikasi Siap Pakai Tanpa Internet";
-        });
+        navigator.serviceWorker.register('sw.js');
     }
 </script>
+
 </body>
-
 </html>
-
