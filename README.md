@@ -1,2 +1,2 @@
-# nadzom
-nadzom
+# ngabuburit
+ngabuburit
