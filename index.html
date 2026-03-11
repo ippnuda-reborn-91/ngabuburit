@@ -10,130 +10,127 @@
             --hijau-tua: #004d00;
             --hijau-nu: #007a33;
             --emas: #d4af37;
-            --bg-halus: #f4f9f4;
+            --bg-halus: #f2f2f2;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
             background: var(--bg-halus);
             margin: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; /* Mulai dari atas agar tidak terpotong */
             min-height: 100vh;
-            padding: 15px;
+            padding: 10px;
         }
 
         .app-card {
             background: white;
             width: 100%;
-            max-width: 420px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            max-width: 360px; /* Ukuran standar layar HP */
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             overflow: hidden;
-            border: 1px solid #e0e0e0;
+            border-top: 5px solid var(--hijau-tua);
         }
 
-        /* Header Islami */
+        /* 1. Judul & Subjudul */
         .header {
-            background: linear-gradient(135deg, var(--hijau-tua), var(--hijau-nu));
+            background: linear-gradient(to bottom, var(--hijau-tua), var(--hijau-nu));
             color: white;
-            padding: 25px 15px;
+            padding: 15px 10px;
             text-align: center;
-            border-bottom: 4px solid var(--emas);
         }
         .header h1 {
-            font-size: 1.3rem;
+            font-size: 16px; /* Diperkecil */
             margin: 0;
-            letter-spacing: 1px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            font-weight: 600;
         }
         .header p {
-            font-size: 0.85rem;
-            margin: 5px 0 0;
-            opacity: 0.9;
+            font-size: 11px; /* Diperkecil */
+            margin: 3px 0 0;
+            opacity: 0.8;
         }
 
-        /* Foto Profil */
+        /* 2. Foto Profil - Turunkan agar tidak menutupi teks */
         .profile-container {
-            margin-top: -45px;
+            margin: 20px 0 10px; /* Memberi jarak dari header */
             text-align: center;
         }
         .profile-img {
-            width: 85px;
-            height: 85px;
+            width: 70px; /* Diperkecil */
+            height: 70px;
             border-radius: 50%;
-            background: white;
-            padding: 4px;
-            border: 3px solid var(--emas);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 2px solid var(--emas);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             object-fit: cover;
         }
 
-        /* Konten */
-        .content {
-            padding: 15px 25px 25px;
-            text-align: center;
-        }
+        /* 3. Judul Ceramah */
         .judul-ceramah {
-            font-size: 1.1rem;
+            font-size: 14px; /* Diperkecil */
             font-weight: bold;
             color: var(--hijau-tua);
-            margin: 15px 0;
-            line-height: 1.4;
+            padding: 0 15px;
+            margin: 10px 0;
+            text-align: center;
         }
 
-        /* Audio Player Elegan */
+        /* 4. Audio Player */
         .audio-box {
-            background: #f0f7f0;
-            padding: 15px;
-            border-radius: 12px;
-            margin-bottom: 25px;
-            border-left: 5px solid var(--hijau-nu);
+            background: #f8fcf8;
+            padding: 10px;
+            margin: 0 15px 15px;
+            border-radius: 10px;
+            border: 1px solid #e0eee0;
         }
         audio {
             width: 100%;
-            filter: sepia(20%) saturate(70%) hue-rotate(80deg); /* Menyesuaikan warna player ke hijau */
+            height: 35px; /* Lebih tipis */
         }
 
-        /* Deskripsi */
+        /* 5. Kotak Deskripsi */
         .description {
             text-align: justify;
-            font-size: 0.92rem;
+            font-size: 12px; /* Diperkecil */
             color: #444;
-            line-height: 1.7;
+            line-height: 1.5;
+            padding: 12px;
+            margin: 0 15px 20px;
             background: #fff;
-            padding: 15px;
-            border-radius: 10px;
-            border: 1px dashed var(--hijau-nu);
+            border-radius: 8px;
+            border: 0.5px solid #ddd;
         }
         .description p {
-            margin: 0 0 10px;
-            text-indent: 25px;
+            margin: 0 0 8px;
+            text-indent: 15px;
         }
 
-        /* Footer Status */
+        /* 6 & 7. Keterangan & Status */
         .footer {
-            background: #f9f9f9;
-            padding: 15px;
+            background: #fdfdfd;
+            padding: 10px 15px;
             border-top: 1px solid #eee;
-            font-size: 0.75rem;
+            text-align: center;
         }
         .ready-text {
             color: var(--hijau-nu);
             font-weight: bold;
-            margin-bottom: 8px;
+            font-size: 10px; /* Diperkecil */
+            margin-bottom: 5px;
             display: block;
         }
         .badge {
             display: inline-block;
-            padding: 4px 12px;
-            border-radius: 15px;
+            padding: 2px 10px;
+            border-radius: 10px;
+            font-size: 9px; /* Diperkecil */
             font-weight: bold;
             color: white;
+            text-transform: uppercase;
         }
-        .online { background: #2e7d32; }
-        .offline { background: #d32f2f; }
+        .online { background: #4caf50; }
+        .offline { background: #f44336; }
     </style>
 </head>
 <body>
@@ -148,20 +145,17 @@
         <img src="https://lh3.googleusercontent.com/u/0/d/15i3gie_yf6dHKqzq3FrrB-v79_XxuMqe" class="profile-img" alt="Ippnuda" onerror="this.src='https://ui-avatars.com/api/?name=IPPNUDA&background=004d00&color=fff'">
     </div>
 
-    <div class="content">
-        <div class="judul-ceramah">Fenomena 10 Hari Terakhir Bulan Ramadhan</div>
+    <div class="judul-ceramah">Fenomena 10 Hari Terakhir Bulan Ramadhan</div>
 
-        <div class="audio-box">
-            <audio id="player" controls>
-                <source src="Fenomena 10 Hari Terakhir Bulan Ramadhan .mp3" type="audio/mpeg">
-                Browser tidak mendukung audio.
-            </audio>
-        </div>
+    <div class="audio-box">
+        <audio id="player" controls>
+            <source src="Fenomena 10 Hari Terakhir Bulan Ramadhan .mp3" type="audio/mpeg">
+        </audio>
+    </div>
 
-        <div class="description">
-            <p>Ada masa ketika menjelang maghrib di bulan Ramadhan terasa begitu khas. Televisi dinyalakan, keluarga berkumpul menunggu adzan, dan suara ceramah dari Zainuddin MZ mengalun menemani detik-detik berbuka. Nasihatnya sederhana, kadang diselingi humor, namun selalu meninggalkan kesan yang dalam di hati.</p>
-            <p>Kini ketika memasuki sepuluh hari terakhir Ramadhan, kenangan itu kembali hadir. Bukan hanya menunggu hidangan berbuka, tetapi juga menunggu kata-kata yang mengingatkan bahwa Ramadhan hampir pergi. Semoga malam-malam terakhir ini kembali menghidupkan kerinduan kita untuk lebih mendekat kepada Allah. 🌙🤲</p>
-        </div>
+    <div class="description">
+        <p>Ada masa ketika menjelang maghrib di bulan Ramadhan terasa begitu khas. Televisi dinyalakan, keluarga berkumpul menunggu adzan, dan suara ceramah dari Zainuddin MZ mengalun menemani detik-detik berbuka. Nasihatnya sederhana, kadang diselingi humor, namun selalu meninggalkan kesan yang dalam di hati.</p>
+        <p>Kini ketika memasuki sepuluh hari terakhir Ramadhan, kenangan itu kembali hadir. Bukan hanya menunggu hidangan berbuka, tetapi juga menunggu kata-kata yang mengingatkan bahwa Ramadhan hampir pergi. Semoga malam-malam terakhir ini kembali menghidupkan kerinduan kita untuk lebih mendekat kepada Allah. 🌙🤲</p>
     </div>
 
     <div class="footer">
@@ -171,7 +165,6 @@
 </div>
 
 <script>
-    // Status Koneksi
     const statusEl = document.getElementById('statusIndicator');
     function checkNetwork() {
         if (navigator.onLine) {
@@ -186,7 +179,6 @@
     window.addEventListener('offline', checkNetwork);
     checkNetwork();
 
-    // Registrasi Service Worker
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js');
     }
